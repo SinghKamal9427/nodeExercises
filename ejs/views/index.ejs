@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week Info</title>
+</head>
+
+<body>
+
+  <!--   <%# FIRST EXERCISE (PASSING PROPS) %> -->
+    <h1> <%=data.title%> </h1>
+    <p>Current Seconds: <%=data.seconds%>
+    </p>
+    <%if(data.seconds%2==0){%>
+        <ul>
+            <%data.items.forEach((val)=>{%>
+                <li><%=val%></li>
+            <%})%>
+        </ul>
+    <%}else{%>
+        <p>Number is odd</p>
+    <%}%>
+                
+    <%-data.htmlContent%>
+    <%-include("footer.ejs")%>
+
+    <!-- <%# SECOND EXERCISE(passing data from server to ejs and ejs to server) %> -->
+    <h1>Form</h1>
+    <%if(locals.length){%>
+    <p>Length of First Name is <%=locals.length %></p>
+<%}else{%>
+    <p>Enter name below</p>
+<%}%>
+    <form action="/submit" method="post">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName"/>
+        <br/>
+        <br/>
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName"/>
+        <input type="submit" value="Enter"/>
+    </form>
+
+</body>
+
+</html>

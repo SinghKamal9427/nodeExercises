@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Tasks</title>
+    <link rel="stylesheet" href="/style/style.css" />
+</head>
+
+<body>
+    <div>
+        <h2>Lets find something for u</h2>
+        <div>
+            <form action="/submit" method="post">
+                <select name="tasks" id="tasks">
+                    <option value="education">education</option>
+                    <option value="cooking">cooking</option>
+                    <option value="recreational">recreational</option>
+                    <option value="social">social</option>
+                    <option value="busywork">busywork</option>
+                </select>
+                <select name="particpants" id="particpants">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <input type="submit" value="GO">
+            </form>
+        </div>
+        <div class="cards">
+            <p><%=activity%></p>
+            <div class="desc">
+                <p><%=type%></p>
+                <p>Participants : <%=participants%></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

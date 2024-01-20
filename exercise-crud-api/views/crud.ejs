@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+</head>
+
+<body>
+    <h1>Crud</h1>
+    <p><%=locals.secret%></p>
+    <Form method="post">
+        <label for="ids">Id:</label>
+        <input type="text" name="ids" />
+        <br />
+        <label for="secrets">Secret:</label>
+        <input type="text" name="secrets" />
+        <br />
+        <label for="scores">Score:</label>
+        <input type="text" name="scores" />
+        <br />
+        <input type = "submit" formaction="/get" id="submit" value="Get"/>
+        <input type = "submit" formaction="/post" id="submit" value="Post"/>
+        <input type = "submit" formaction="/put" id="submit" value="Put"/>
+        <input type = "submit" formaction="" id="submit" value="Patch"/>
+        <input type = "submit" formaction="/delete" id="submit" value="Delete"/>
+    </Form>
+</body>
+
+</html>
